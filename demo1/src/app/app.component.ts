@@ -10,8 +10,11 @@ export class AppComponent {
   url = 'http://blog.miniasp.com/';
   imgUrl = '/assets/images/logo.png';
 
-  changeTitle() {
-    this.title = 'The Will Will Web';
+  changeTitle($event) {
+    if ($event.altKey) {
+      this.title = 'The Will Will Web';
+    }
+    console.log($event);
   }
 
 }
