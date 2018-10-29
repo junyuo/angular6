@@ -25,7 +25,7 @@
   <div class="title-wrapper">
     <div class="container">
 
-      <img (click)="changeTitle($event)" [title]='title' [src]="imgUrl" class="pull-left logo" alt="The Will Will Web">
+      <img (click)="changeTitle($event.altKey)" [title]='title' [src]="imgUrl" class="pull-left logo" alt="The Will Will Web">
 
       <div class="pull-left">
         <h1><a [href]="url">{{ title }}</a></h1>
@@ -152,8 +152,10 @@
         <div class="widget search">
           <div class="widget-content">
             <div id="searchbox">
-              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s">
+              <input type="text" placeholder="請輸入搜尋關鍵字" accesskey="s" [value]="searchText" (input)="searchText = $event.target.value"
+                (keydown.esc)="escapeEvent()">
               <input type="button" value="搜尋" id="searchbutton">
+              目前字數 : {{ this.searchText.length }}
             </div>
           </div>
         </div>
