@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'app';
   url = 'http://blog.miniasp.com/';
   imgUrl = '/assets/images/logo.png';
-  wordCount = 0;
+  keyword = '';
 
   public searchText: string;
 
@@ -30,18 +30,8 @@ export class AppComponent implements OnInit {
     }
   }
 
-  // 清除所輸入的關鍵字
-  escapeEvent() {
-    this.searchText = '';
-  }
-
-  changeKeyword(keyword: string) {
-    this.wordCount = keyword.length;
-  }
-
-  clearKeyword(input: HTMLInputElement) {
-    this.wordCount = 0;
-    input.value = '';
+  clearKeyword() {
+    this.keyword = '';
   }
 
 }
