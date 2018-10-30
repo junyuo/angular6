@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
   title = 'app';
   url = 'http://blog.miniasp.com/';
   imgUrl = '/assets/images/logo.png';
+  counter = 0;
 
   constructor() { }
 
@@ -22,6 +23,11 @@ export class HeaderComponent implements OnInit {
     } else {
       this.title = 'app';
     }
+    this.counter++;
+  }
+
+  changeStyle() {
+    return { 'font-size': (12 + this.counter) + 'px' };
   }
 
 }
