@@ -1,11 +1,11 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, OnChanges } from '@angular/core';
 
 @Component({
   selector: 'app-article-body',
   templateUrl: './article-body.component.html',
   styleUrls: ['./article-body.component.css']
 })
-export class ArticleBodyComponent implements OnInit {
+export class ArticleBodyComponent implements OnInit, OnChanges {
 
   @Input()
   item;
@@ -13,6 +13,9 @@ export class ArticleBodyComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  ngOnChanges(): void {
   }
 
 }

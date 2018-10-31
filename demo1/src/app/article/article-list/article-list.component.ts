@@ -85,7 +85,7 @@ export class ArticleListComponent implements OnInit {
   doDelete(item) {
     this.data =
       this.data.filter((v) => {
-        return v !== item;
+        return v.id !== item.id;
       });
   }
 
