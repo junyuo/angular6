@@ -11,7 +11,7 @@ export class ArticleListComponent implements OnInit {
 
   isEdited = false;
 
-  constructor(private dataSvc: DataService) {
+  constructor(public dataSvc: DataService) {
   }
 
   ngOnInit() {
