@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-article-list',
@@ -10,9 +11,12 @@ export class ArticleListComponent implements OnInit {
   data: Array<any>;
   isEdited = false;
 
-  constructor() { }
+  constructor(private dataSvc: DataService) {
+  }
 
   ngOnInit() {
+    this.dataSvc.run();
+
     this.data =
       [
         {
