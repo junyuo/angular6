@@ -7,30 +7,19 @@ import { RSA_SSLV23_PADDING } from 'constants';
 })
 export class DataService {
 
-  data;
-
   constructor(private httpClient: HttpClient) {
-    httpClient.get('../../api/articles.json').subscribe((res) => {
-      this.data = res;
-    });
   }
 
-  run() {
+  getData() {
+    return this.httpClient.get('http://localhost:4200/api/articles.json');
   }
 
   public doDelete(item) {
-    this.data =
-      this.data.filter((v) => {
-        return v.id !== item.id;
-      });
+    return this.httpClient.delete('http://localhost:4200/api/articles/' + item.id);
   }
 
   public doModify(post: any) {
-    this.data = this.data.map((item) => {
-      if (item.id === post.id) {
-        return Object.assign({}, item, post);
-      }
-      return item;
-    });
+    return this.httpClient.put('http://localhost:4200/api/articles/' + post.id, post);
   }
+
 }
