@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -7,7 +8,7 @@ export class DataService {
 
   data;
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
     this.data = [
       {
         "id": 1,
@@ -77,7 +78,6 @@ export class DataService {
   }
 
   run() {
-    console.log('Data Service');
   }
 
   public doDelete(item) {
