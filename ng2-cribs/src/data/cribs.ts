@@ -8,7 +8,8 @@ export const cribs = [
     'bedrooms': 2,
     'bathrooms': 1.5,
     'area': 921,
-    'image': 'crib-1'
+    'image': 'crib-1',
+    'showDetails': false
   },
   {
     'id': 2,
@@ -19,7 +20,8 @@ export const cribs = [
     'bedrooms': 4,
     'bathrooms': 3,
     'area': 2145,
-    'image': 'crib-2'
+    'image': 'crib-2',
+    'showDetails': false
   },
   {
     'id': 3,
@@ -30,7 +32,8 @@ export const cribs = [
     'bedrooms': 3,
     'bathrooms': 2.5,
     'area': 1500,
-    'image': 'crib-3'
+    'image': 'crib-3',
+    'showDetails': false
   },
   {
     'id': 4,
@@ -41,7 +44,8 @@ export const cribs = [
     'bedrooms': 6,
     'bathrooms': 4.5,
     'area': 3230,
-    'image': 'crib-4'
+    'image': 'crib-4',
+    'showDetails': false
   },
   {
     'id': 5,
@@ -52,7 +56,8 @@ export const cribs = [
     'bedrooms': 2,
     'bathrooms': 1.5,
     'area': 1023,
-    'image': 'crib-5'
+    'image': 'crib-5',
+    'showDetails': false
   },
   {
     'id': 6,
@@ -63,6 +68,7 @@ export const cribs = [
     'bedrooms': 4,
     'bathrooms': 2.5,
     'area': 1788,
-    'image': 'crib-6'
+    'image': 'crib-6',
+    'showDetails': false
   }
 ];
