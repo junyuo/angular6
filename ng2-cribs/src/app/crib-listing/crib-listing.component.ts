@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Crib } from '../crib';
-// import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-crib-listing',
