@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { CribsService } from '../service/cribs.service';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -8,15 +9,18 @@ import { NgForm } from '@angular/forms';
 })
 export class AddListingFormComponent implements OnInit {
 
+  @ViewChild('newCribForm') newCribForm: NgForm;
+
   propertyTypes: Array<string> = ['House', 'Condo', 'Duplex'];
 
-  constructor() { }
+  constructor(public cribsService: CribsService) { }
 
   ngOnInit() {
   }
 
   onCribSubmit(data): void {
-    console.log(data);
+    this.cribsService.addCrib(data);
+    this.newCribForm.reset();
   }
 
 }
