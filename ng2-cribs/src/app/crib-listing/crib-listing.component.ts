@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { CribsService } from '../service/cribs.service';
 
 @Component({
   selector: 'app-crib-listing',
@@ -9,14 +9,17 @@ import { HttpClient } from '@angular/common/http';
 export class CribListingComponent implements OnInit {
 
   cribs: Array<any>;
+  error: string;
 
-  constructor(private http: HttpClient) { }
+  constructor(private cribsService: CribsService) { }
 
   ngOnInit() {
-    this.http.get<any[]>('../../assets/data/cribs.json').subscribe(data => {
+    this.cribsService.getAllCribs().subscribe(data => {
       this.cribs = data;
-    }, (error) => { console.error(error); });
-
+    }, (error) => {
+      console.error(error);
+      this.error = error.statusText;
+    });
   }
 
 }
