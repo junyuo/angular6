@@ -13,6 +13,8 @@ import { UtilService } from './service/util.service';
 
 import { AddListingFormComponent } from './add-listing-form/add-listing-form.component';
 import { SortByPipe } from './pipes/sort-by.pipe';
+import { TodoItemComponent } from './todo-item/todo-item.component';
+import { AddTodoComponent } from './add-todo/add-todo.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { SortByPipe } from './pipes/sort-by.pipe';
     CribListingComponent,
     CribCardComponent,
     AddListingFormComponent,
-    SortByPipe
+    SortByPipe,
+    TodoItemComponent,
+    AddTodoComponent
   ],
   imports: [
     BrowserModule,
